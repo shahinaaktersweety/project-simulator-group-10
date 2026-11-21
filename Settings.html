@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings - ProjectFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="profile.html" class="brand">ProjectFlow</a>
+        <div class="nav-links">
+            <a href="projects.html">Projects</a>
+            <a href="create-project.html">Create Project</a>
+            <a href="report.html">Report</a>
+            <a href="profile.html">Profile</a>
+            <a href="Settings.html" class="active">Settings</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form id="settings">
+            <h2 class="page-title title-spacing">Settings</h2>
+
+            <div class="row">
+                <label class="field-label">Account Settings (Profile)</label>
+                <button type="button" class="arrow-btn" id="goProfileBtn">→</button>
+            </div>
+
+            <div class="row">
+                <label class="field-label">Edit Profile</label>
+                <button type="button" class="arrow-btn" id="goEditProfileBtn">→</button>
+            </div>
+
+            <div class="row">
+                <label class="field-label">Change Password</label>
+                <button type="button" class="arrow-btn" id="goChangePassBtn">→</button>
+            </div>
+
+            <div class="row">
+                <label class="field-label">Mode</label>
+                <div class="radio-group">
+                    <label for="lightMode">
+                        <input type="radio" id="lightMode" name="mode" value="light" checked> Light
+                    </label>
+                    <label for="darkMode">
+                        <input type="radio" id="darkMode" name="mode" value="dark"> Dark
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <label class="field-label" for="language">Language</label>
+                <select id="language">
+                    <option value="">Select Language</option>
+                    <option value="English">English</option>
+                    <option value="Bangla">Bangla</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                </select>
+            </div>
+
+            <span class="error" id="languageError"></span>
+
+            <div class="bottom-buttons">
+                <button type="submit" class="btn save">Save Changes</button>
+                <button type="button" class="btn back" id="backBtn">Back</button>
+                <button type="button" class="btn exit" id="exitBtn">Exit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

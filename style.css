@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f5f9;
+    color: #1e293b;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Top Navbar matching ProjectFlow */
+.navbar {
+    background-color: #163d8c;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar .brand {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar .nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+    color: white;
+    font-weight: 600;
+}
+
+/* Main Card Container */
+.container {
+    padding: 35px 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 32px 35px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+h2.page-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.title-spacing {
+    margin-bottom: 24px;
+}
+
+/* Sub Navigation Buttons */
+.sub-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-btn {
+    background-color: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+/* Settings Page Rows */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.row:last-of-type {
+    border-bottom: none;
+}
+
+.row label.field-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.arrow-btn {
+    background-color: #f1f5f9;
+    color: #1a56db;
+    border: 1px solid #cbd5e1;
+    padding: 6px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+
+.arrow-btn:hover {
+    background-color: #1a56db;
+    color: white;
+    border-color: #1a56db;
+}
+
+.radio-group {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.radio-group label {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.row select {
+    width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 9px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #1e293b;
+    outline: none;
+    cursor: pointer;
+}
+
+.row select:focus {
+    border-color: #1a56db;
+}
+
+/* Edit Profile Photo Upload Box */
+.change-photo-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 16px;
+    background-color: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.change-photo-box:hover {
+    border-color: #1a56db;
+}
+
+.change-photo-box .avatar-circle {
+    width: 46px;
+    height: 46px;
+    background-color: #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.change-photo-box span#photoText {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1a56db;
+}
+
+.photo-subtext {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+/* Stacked Form Fields (Edit Profile & Change Password) */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1e293b;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #1a56db;
+}
+
+/* Validation & Hint Messages */
+.error {
+    color: #dc2626;
+    font-size: 13px;
+    display: block;
+    margin-top: 6px;
+}
+
+.hint-text {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: -6px;
+    margin-bottom: 18px;
+}
+
+/* Action Buttons */
+.bottom-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.save {
+    background-color: #1a56db;
+}
+
+.save:hover {
+    background-color: #1545b3;
+}
+
+.back, .exit {
+    background-color: #848d9a;
+}
+
+.back:hover, .exit:hover {
+    background-color: #6c7582;
+}
+
+/* Dark Mode Support (for Settings toggle) */
+body.dark-theme {
+    background-color: #0f172a;
+}
+body.dark-theme form {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+body.dark-theme h2.page-title,
+body.dark-theme .row label.field-label,
+body.dark-theme .radio-group label {
+    color: #f8fafc;
+}
+body.dark-theme .row {
+    border-bottom-color: #334155;
+}
