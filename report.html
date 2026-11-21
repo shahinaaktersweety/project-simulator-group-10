@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Report - ProjectFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showReport()">
+
+    <nav>
+        <h2>ProjectFlow</h2>
+        <a href="project.html">Projects</a>
+        <a href="create-project.html">Create Project</a>
+        <a href="report.html">Report</a>
+    </nav>
+
+    <div class="container">
+
+        <h1>Project Report</h1>
+        <p>Overview of your software projects.</p>
+
+        <div class="report-box">
+
+            <div class="card blue">
+                <h3>Total Projects</h3>
+                <h1 id="total">0</h1>
+            </div>
+
+            <div class="card green">
+                <h3>Complete</h3>
+                <h1 id="complete">0</h1>
+            </div>
+
+            <div class="card yellow">
+                <h3>Running</h3>
+                <h1 id="running">0</h1>
+            </div>
+
+            <div class="card red">
+                <h3>Pending</h3>
+                <h1 id="pending">0</h1>
+            </div>
+
+        </div>
+
+        <div class="progress-box">
+
+            <h2>Project Progress</h2>
+
+            <p>Complete: <span id="completePercent">0%</span></p>
+            <progress id="completeBar" value="0" max="100"></progress>
+
+            <p>Running: <span id="runningPercent">0%</span></p>
+            <progress id="runningBar" value="0" max="100"></progress>
+
+            <p>Pending: <span id="pendingPercent">0%</span></p>
+            <progress id="pendingBar" value="0" max="100"></progress>
+
+        </div>
+
+        <a href="project.html" class="btn">Back to Projects</a>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
