@@ -1,0 +1,234 @@
+
+/* All Pages */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #222222;
+}
+
+/* Navigation Bar */
+
+nav {
+    background-color: #123b91;
+    padding: 18px 35px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav h2 {
+    color: white;
+    margin: 0;
+    margin-right: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #2878e3;
+}
+
+/* Main Container */
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 35px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #dddddd;
+}
+
+.container h1 {
+    color: #172b4d;
+}
+
+.container p {
+    color: #555555;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background-color: #1256bb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #083b88;
+}
+
+/* Project Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th {
+    background-color: #dce9ff;
+    color: #172b4d;
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+tr:hover {
+    background-color: #f0f5ff;
+}
+
+/* Create Project Form */
+
+.form-box {
+    width: 60%;
+    margin: 20px auto;
+    padding: 25px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    border-color: #1256bb;
+    outline: none;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.cancel {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #e5e7eb;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.cancel:hover {
+    background-color: #cccccc;
+}
+
+/* Report Cards */
+
+.report-box {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 5px;
+}
+
+.card h1 {
+    font-size: 35px;
+}
+
+.blue {
+    background-color: #dbeafe;
+}
+
+.green {
+    background-color: #dcfce7;
+}
+
+.yellow {
+    background-color: #fef3c7;
+}
+
+.red {
+    background-color: #fee2e2;
+}
+
+/* Progress Section */
+
+.progress-box {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+}
+
+.progress-box p {
+    margin-top: 20px;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    accent-color: #1256bb;
+}
+
+/* Small Screens */
+
+@media (max-width: 700px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-box {
+        width: auto;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}

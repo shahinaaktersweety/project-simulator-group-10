@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projects - ProjectFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showProjects()">
+
+    <nav>
+        <h2>ProjectFlow</h2>
+        <a href="project.html">Projects</a>
+        <a href="create-project.html">Create Project</a>
+        <a href="report.html">Report</a>
+    </nav>
+
+    <div class="container">
+
+        <h1>Projects</h1>
+        <p>Manage your software projects in one place.</p>
+
+        <a class="btn" href="create-project.html">
+            + Create New Project
+        </a>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Client</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="projectTable">
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Project - ProjectFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>ProjectFlow</h2>
+        <a href="project.html">Projects</a>
+        <a href="create-project.html">Create Project</a>
+        <a href="report.html">Report</a>
+    </nav>
+
+    <div class="container">
+
+        <h1>Create New Project</h1>
+
+        <div class="form-box">
+
+            <form onsubmit="return saveProject()">
+
+                <label>Project Name</label>
+                <input type="text" id="projectName"
+                       placeholder="Enter project name">
+
+                <label>Client</label>
+                <input type="text" id="client"
+                       placeholder="Enter client name">
+
+                <label>Starting Date</label>
+                <input type="date" id="startDate">
+
+                <label>Deadline</label>
+                <input type="date" id="deadline">
+
+                <label>Budget (BDT)</label>
+                <input type="number" id="budget"
+                       placeholder="Enter budget">
+
+                <label>Status</label>
+                <select id="status">
+                    <option value="Pending">Pending</option>
+                    <option value="Running">Running</option>
+                    <option value="Complete">Complete</option>
+                </select>
+
+                <div class="buttons">
+                    <button type="submit" class="btn">
+                        Save Project
+                    </button>
+
+                    <a href="project.html" class="cancel">
+                        Cancel
+                    </a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
