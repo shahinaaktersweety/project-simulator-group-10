@@ -126,20 +126,38 @@
       </thead>
 
       <tbody>
-        <tr><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
       </tbody>
     </table>
 
   </div>
 
   <script>
-    document.getElementById('add').onclick = () => {
+    var addButton = document.getElementById('add');
+    var backButton = document.getElementById('back');
+
+    addButton.onclick = function () {
       location.href = 'add-client.html';
     };
 
-    document.getElementById('back').onclick = () => {
+    backButton.onclick = function () {
       history.back();
     };
   </script>

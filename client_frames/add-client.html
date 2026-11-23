@@ -138,20 +138,38 @@
   </div>
 
   <script>
-    const ids = ['name', 'email', 'phone', 'company'];
+    const fieldIds = ['name', 'email', 'phone', 'company'];
 
-    const $ = id => document.getElementById(id);
+    const cancelButton = document.getElementById('cancel');
+    const backButton = document.getElementById('back');
+    const saveButton = document.getElementById('save');
 
-    $('cancel').onclick = () =>
-      ids.forEach(id => $(id).value = '');
+    cancelButton.onclick = function () {
+      for (let i = 0; i < fieldIds.length; i++) {
+        const field = document.getElementById(fieldIds[i]);
+        field.value = '';
+      }
+    };
 
-    $('back').onclick = () =>
+    backButton.onclick = function () {
       location.href = 'client.html';
+    };
 
-    $('save').onclick = () => {
-      if (!ids.every(id => $(id).reportValidity())) return;
+    saveButton.onclick = function () {
+      let allValid = true;
 
-      location.href = 'client.html';
+      for (let i = 0; i < fieldIds.length; i++) {
+        const field = document.getElementById(fieldIds[i]);
+
+        if (field.reportValidity() === false) {
+          allValid = false;
+          break;
+        }
+      }
+
+      if (allValid == true) {
+        window.location.href = 'client.html';
+      }
     };
   </script>
 
