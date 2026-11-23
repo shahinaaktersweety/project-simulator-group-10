@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add Client</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px 16px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    .label {
+      max-width: 900px;
+      margin: 0 auto 8px;
+      font-size: 11px;
+    }
+
+    .panel {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 40px 40px;
+    }
+
+    h1 {
+      margin: 0 0 40px;
+      text-align: center;
+      font-size: 34px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .row label {
+      width: 180px;
+      font-size: 24px;
+    }
+
+    .row input {
+      flex: 1;
+      padding: 14px 16px;
+      border: 1px solid #999;
+      font: inherit;
+      font-size: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 56px;
+    }
+
+    button {
+      width: 28%;
+      padding: 14px 0;
+      border: 1px solid #999;
+      font: inherit;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    .back {
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .panel {
+        padding: 24px 16px 32px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+      }
+
+      .row label {
+        width: auto;
+        font-size: 18px;
+      }
+
+      button {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="label">Add Client</div>
+
+  <div class="panel">
+
+    <h1>Add New Client</h1>
+
+    <div class="row">
+      <label for="name">Name</label>
+      <input id="name" required>
+    </div>
+
+    <div class="row">
+      <label for="email">Email</label>
+      <input id="email" type="email">
+    </div>
+
+    <div class="row">
+      <label for="phone">Phone</label>
+      <input id="phone">
+    </div>
+
+    <div class="row">
+      <label for="company">Company</label>
+      <input id="company">
+    </div>
+
+    <div class="buttons">
+      <button id="cancel">Cancel</button>
+      <button id="save">Save</button>
+      <button class="back" id="back">Back</button>
+    </div>
+
+  </div>
+
+  <script>
+    const ids = ['name', 'email', 'phone', 'company'];
+
+    const $ = id => document.getElementById(id);
+
+    $('cancel').onclick = () =>
+      ids.forEach(id => $(id).value = '');
+
+    $('back').onclick = () =>
+      location.href = 'client.html';
+
+    $('save').onclick = () => {
+      if (!ids.every(id => $(id).reportValidity())) return;
+
+      location.href = 'client.html';
+    };
+  </script>
+
+</body>
+
+</html>
